@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FriendFinder | Survey</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>FriendFinder</h1>
+      <h4>You're lonely. We can help.</h4>
+    </div>
+
+    <div class="row intro">
+      <div class="col-7">
+        <h2>Getting to know you...</h2>
+        <p>This survey has been scientifically developed to ensure the highest probabililty of finding a perfect friend for you. Please be 100% honest in all your answers.</p>
+        <p>NOTE: This information <em>may</em> be shared with shady government entities, sold to marketing agencies and/or used to ridicule you online.</p>
+
+      </div>
+    </div>
+
+    <form id="survey">
+
+      <h3>Basic Info</h3>
+
+      <div class="question form-group row">
+        <label for="name" class="col-2 col-form-label">Name</label>
+        <div class="col-5">
+          <input class="form-control" type="text" placeholder="Your Name" id="name">
+        </div>
+      </div>
+      <!-- question -->
+
+      <div class="question form-group row">
+        <label for="photo" class="col-2 col-form-label">Photo URL</label>
+        <div class="col-5">
+          <input class="form-control" type="text" placeholder="http://website.com/image.jpg" id="photo">
+        </div>
+      </div>
+      <!-- question -->
+
+      <h3>The Questions</h3>
+
+      <div class="row">
+        <div class="col-7">
+          <div class="question">
+            <div><span class="badge badge-pill badge-default">1</span></div>
+            <label for="q1">Post-apocalyptic visions of the future always put a smile on your face.</label>
+            <div class="range-group">
+              <div>Strongly Disagree</div>
+              <input type="range" id="q1" min="1" value="3" max="5" step="1">
+              <div>Strongly Agree</div>
+            </div>
+          </div>
+          <!-- question -->
+
+          <div class="question">
+            <div><span class="badge badge-pill badge-default">2</span></div>
+            <label for="q2">When choosing friends, your first thought is, "I wonder what they would taste like barbecued..."</label>
+            <div class="range-group">
+              <div>Strongly Disagree</div>
+              <input type="range" id="q2" min="1" value="3" max="5" step="1">
+              <div>Strongly Agree</div>
+            </div>
+          </div>
+          <!-- question -->
+
+          <div class="question">
+            <div><span class="badge badge-pill badge-default">3</span></div>
+            <label for="q3">On a Sunday night, you'd prefer performing a ritual sacrifice over watching <em>Game of Thrones</em>.</label>
+            <div class="range-group">
+              <div>Strongly Disagree</div>
+              <input type="range" id="q3" min="1" value="3" max="5" step="1">
+              <div>Strongly Agree</div>
+            </div>
+          </div>
+          <!-- question -->
+
+          <div class="question">
+            <div><span class="badge badge-pill badge-default">4</span></div>
+            <label for="q4">All of your friends belong to the same cult.</label>
+            <div class="range-group">
+              <div>Strongly Disagree</div>
+              <input type="range" id="q4" min="1" value="3" max="5" step="1">
+              <div>Strongly Agree</div>
+            </div>
+          </div>
+          <!-- question -->
+
+          <div class="question">
+            <div><span class="badge badge-pill badge-default">5</span></div>
+            <label for="q5">Cthulhu will make a fantastic overlord, and you look forward to serving him.</label>
+            <div class="range-group">
+              <div>Strongly Disagree</div>
+              <input type="range" id="q5" min="1" value="3" max="5" step="1">
+              <div>Strongly Agree</div>
+            </div>
+          </div>
+          <!-- question -->
+
+          <div id="submitContainer">
+            <input type="submit" id="submit" class="btn btn-primary" value="Submit">
+          </div>
+
+        </div>
+        <!-- col -->
+      </div>
+      <!-- row -->
+
+    </form>
+
+    <!-- Modal containing matched friend -->
+    <div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Your new friend is...</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- container -->
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <!-- Custom JS -->
+  <script src="/js/app.js"></script>
+
+</body>
+
+</html>

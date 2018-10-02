@@ -1,0 +1,33 @@
+h3 {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+    margin-bottom: 1rem; }
+  
+  .intro {
+    margin-bottom: 2rem; }
+  
+  form .question {
+    margin-bottom: 2rem; }
+    form .question label {
+      font-size: 1.2rem; }
+      form .question label .error {
+        color: red; }
+    form .question .range-group {
+      margin: 2rem 0 3rem 0; }
+      form .question .range-group div {
+        position: relative;
+        font-size: 0.8rem;
+        bottom: .2rem; }
+      form .question .range-group input[type="range"] {
+        width: 100%; }
+  
+  .modal .modal-dialog .modal-content .modal-body img {
+    width: 100%;
+    min-width: 100%;
+    height: auto; }
+  
+  footer {
+    border-top: 1px solid #cccccc;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    text-align: center; }
