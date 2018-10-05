@@ -17,7 +17,7 @@ var questions = [
     },
     {
       "id"   : 5,
-      "text" : "CVader will make a fantastic overlord, and you look forward to serving him."
+      "text" : "Vader will make a fantastic overlord, and you look forward to serving him."
     },
     {
       "id"   : 6,
